@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+class ArraySort{
+    public static void main(String args[]){
+       try{
+            Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Size of the Array :");
+        int ArrSize = sc.nextInt();
+        
+        // create an Array named Arrsort
+        int[] Arrsort = new int[ArrSize];
+        for(int i = 0;i<Arrsort.length;i++){
+            System.out.print("Enter Element " + (i + 1) + ": ");
+            Arrsort[i] = sc.nextInt();
+        } 
+        System.out.print("Original Array is:");
+        for(int ShowArr:Arrsort){ // for each loop is used 
+            System.out.print(ShowArr+" ");
+        }
+        Arrays.sort(Arrsort);// Arrays.sort() method is used 
+        System.out.print("\nThe sorted Array is:");
+        for(int ShowArr:Arrsort){// to dispaly the result  
+            System.out.print(ShowArr+" ");
+            }
+        }
+        catch(InputMismatchException e){
+            System.out.print("Invalid Input, Please write Inergers Only !");       
+        }
+    }
+}
